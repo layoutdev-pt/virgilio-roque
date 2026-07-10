@@ -114,12 +114,19 @@ export const Navbar: React.FC = () => {
           }`}
         >
           {/* Left: Logo */}
-        <Link to="/" className="flex items-center h-full">
+        <Link to="/" className="flex items-center h-full relative">
           <img
-            src={isScrolled ? logoIcon : logoPrincipal}
+            src={logoPrincipal}
             alt="Virgílio Roque"
             className={`transition-all duration-500 ease-in-out object-contain object-left ${
-              isScrolled ? "h-10 md:h-12" : "h-14 md:h-16 lg:h-20"
+              isScrolled ? "opacity-0 absolute pointer-events-none h-10 md:h-12" : "opacity-100 relative h-14 md:h-16 lg:h-20"
+            }`}
+          />
+          <img
+            src={logoIcon}
+            alt="Virgílio Roque Icon"
+            className={`transition-all duration-500 ease-in-out object-contain object-left ${
+              isScrolled ? "opacity-100 relative h-10 md:h-12" : "opacity-0 absolute pointer-events-none h-14 md:h-16 lg:h-20"
             }`}
           />
         </Link>

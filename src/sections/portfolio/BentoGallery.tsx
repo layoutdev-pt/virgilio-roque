@@ -31,7 +31,7 @@ const portfolioItems = [
     id: "erpi-do-peso",
     title: "ERPI do Peso",
     image: "/images/obras/lar/ERPI001.png",
-    description: "Covilhã",
+    description: "Peso",
   },
   // {   id: 6, title: 'Ponte Rodoviária', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1200', description: 'Engenharia civil focada na mobilidade.' },
   // { id: 7, title: 'Resort & Spa', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1200', description: 'Integração paisagística e acabamentos premium.' },
