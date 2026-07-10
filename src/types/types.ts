@@ -13,6 +13,7 @@ export interface PortfolioProject {
   coverImages: string[];
   gallery: string[];
   price?: string;
+  location?: string;
 }
 
 export interface Service {

@@ -4,6 +4,7 @@ export const portfolioData: PortfolioProject[] = [
   {
     id: 'cidade-nova',
     title: 'EMPREENDIMENTO CIDADE NOVA',
+    location: 'Covilhã, Portugal',
     overviewSummary: 'Condomínio moderno no coração da Covilhã com apartamentos de tipologias variadas e acabamentos de alta qualidade.',
     overviewDetailed: 'Situado numa localização estratégica no centro da Covilhã, junto à Faculdade e a diversas escolas, o empreendimento Cidade Nova reflete o compromisso da Virgílio Roque com a construção de alta qualidade. Este condomínio fechado combina arquitetura contemporânea, rigor técnico e espaços de lazer exclusivos.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
@@ -22,7 +23,6 @@ export const portfolioData: PortfolioProject[] = [
       '/images/obras/CIDADE NOVA/02.png',
       '/images/obras/CIDADE NOVA/03.png'
     ],
-    price: '$298,000',
     sections: [
       {
         subtitle: 'Qualidade Construtiva e Sustentabilidade',
@@ -64,6 +64,7 @@ export const portfolioData: PortfolioProject[] = [
   {
     id: 'quinta-do-pinheiro',
     title: 'BLOCO HABITACIONAL - QUINTA DO PINHEIRO',
+    location: 'Covilhã, Portugal',
     overviewSummary: 'Um dos maiores blocos habitacionais da cidade da Covilhã, este empreendimento residencial de grande escala destaca-se pela robustez construtiva e elevado padrão de qualidade.',
     overviewDetailed: 'O Bloco Habitacional Quinta do Pinheiro afirma-se como um dos maiores edifícios residenciais da cidade da Covilhã. Este projeto de grande envergadura reflete a capacidade de execução logística e técnica da Virgílio Roque, aliando engenharia robusta a um design contemporâneo.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
@@ -79,7 +80,6 @@ export const portfolioData: PortfolioProject[] = [
       '/images/obras/quinta do pinheiro/02.jpg',
       '/images/obras/quinta do pinheiro/03.jpg'
     ],
-    price: '$298,000',
     sections: [
       {
         subtitle: 'Solidez e Conforto',
@@ -99,6 +99,7 @@ export const portfolioData: PortfolioProject[] = [
   {
     id: 'faculdade-medicina',
     title: 'EDIFÍCIO JUNTO À FACULDADE DE MEDICINA',
+    location: 'Covilhã, Portugal',
     overviewSummary: 'Edifício residencial junto à Faculdade de Medicina da UBI, ideal para investimento ou habitação própria.',
     overviewDetailed: 'Localizado numa zona de excelência e de elevada procura na Covilhã, junto à Faculdade de Medicina da UBI e ao Hospital, este edifício residencial reflete o padrão de rigor e qualidade construtiva da Virgílio Roque. Projetado para oferecer uma excelente oportunidade de investimento ou habitação própria, o empreendimento destaca-se pela modernidade, eficiência energética e centralidade.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
@@ -112,7 +113,6 @@ export const portfolioData: PortfolioProject[] = [
       '/images/obras/faculdade de medicina/02.png',
       '/images/obras/faculdade de medicina/04.png'
     ],
-    price: '$298,000',
     sections: [
       {
         subtitle: 'Engenharia e Sustentabilidade',
@@ -146,6 +146,7 @@ export const portfolioData: PortfolioProject[] = [
   {
     id: 'erpi-do-peso',
     title: 'NOVA ERPI DO PESO',
+    location: 'Peso, Covilhã, Portugal',
     overviewSummary: 'Equipamento social moderno situado na freguesia do Peso, concebido com instalações de alta qualidade para oferecer conforto, segurança e cuidados de excelência à população sénior.',
     overviewDetailed: 'Situada na tranquilidade do Peso, a nova Estrutura Residencial para Pessoas Idosas (ERPI) reflete o compromisso da Virgílio Roque com a construção de equipamentos sociais de elevada exigência técnica. Este projeto combina arquitetura funcional, rigor normativo e espaços dedicados ao conforto e à segurança máxima dos utentes e profissionais.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
@@ -168,7 +169,6 @@ export const portfolioData: PortfolioProject[] = [
       '/images/obras/lar/ERPI004.png',
       '/images/obras/lar/ERPI015.png'
     ],
-    price: '$20,000,000',
     sections: [
       {
         subtitle: 'Qualidade Construtiva e Sustentabilidade',
@@ -212,6 +212,7 @@ export const portfolioData: PortfolioProject[] = [
     {
     id: 'estacao-tortosendo',
     title: 'ESTAÇÃO TORTOSENDO',
+    location: 'Tortosendo, Covilhã, Portugal',
     overviewSummary: 'Requalificação e modernização integral da Estação Ferroviária do Tortosendo, focada na melhoria das acessibilidades, segurança e durabilidade das infraestruturas para todos os utentes.',
     overviewDetailed: 'Empreitada de modernização e requalificação da Estação Ferroviária do Tortosendo, adaptando esta infraestrutura pública aos exigentes padrões atuais de segurança, conforto e mobilidade regional.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
@@ -222,7 +223,6 @@ export const portfolioData: PortfolioProject[] = [
       '/images/obras/estacao torotosendo/02.jpg',
       '/images/obras/estacao torotosendo/03.jpg'
     ],
-    price: '$20,000,000',
     sections: [
       {
         subtitle: 'Engenharia e Reabilitação',
