@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-// Define image paths (from public folder)
+// Import images
 const imgCidadeNova = "/images/obras/CIDADE NOVA/08.png";
 const imgEstacao = "/images/obras/estacao torotosendo/01.jpg";
 const imgFaculdade = "/images/obras/faculdade de medicina/01.png";
 const imgLar = "/images/obras/lar/ERPI001.png";
 const imgQuinta = "/images/obras/quinta do pinheiro/01.jpg";
 
-// Define video path
+// Assets Extras
 const videoLar = "/images/obras/lar/lar covialvi.mp4";
 
 import { Link } from "react-router-dom";
