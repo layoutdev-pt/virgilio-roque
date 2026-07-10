@@ -57,7 +57,7 @@ export const Navbar: React.FC = () => {
         
         {/* Left: Logo */}
         <Link to="/" className="flex items-center h-full">
-          <img src={logoPrincipal} alt="Virgílio Roque" className="h-10 md:h-12 w-auto object-contain" />
+          <img src={logoPrincipal} alt="Virgílio Roque" className="h-14 md:h-16 lg:h-20 w-auto object-contain" />
         </Link>
 
         {/* Center: Desktop Links */}

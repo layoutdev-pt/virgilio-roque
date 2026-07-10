@@ -8,19 +8,19 @@ export const portfolioData: PortfolioProject[] = [
     overviewDetailed: 'Situado numa localização estratégica no centro da Covilhã, junto à Faculdade e a diversas escolas, o empreendimento Cidade Nova reflete o compromisso da Virgílio Roque com a construção de alta qualidade. Este condomínio fechado combina arquitetura contemporânea, rigor técnico e espaços de lazer exclusivos.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      'src/assets/images/obras/CIDADE NOVA/01.png',
-      'src/assets/images/obras/CIDADE NOVA/02.png',
-      'src/assets/images/obras/CIDADE NOVA/03.png',
-      'src/assets/images/obras/CIDADE NOVA/04.png',
-      'src/assets/images/obras/CIDADE NOVA/05.png',
-      'src/assets/images/obras/CIDADE NOVA/06.png',
-      'src/assets/images/obras/CIDADE NOVA/07.png',
-      'src/assets/images/obras/CIDADE NOVA/08.png',
-      'src/assets/images/obras/CIDADE NOVA/09.png',
+      '/images/obras/CIDADE NOVA/01.png',
+      '/images/obras/CIDADE NOVA/02.png',
+      '/images/obras/CIDADE NOVA/03.png',
+      '/images/obras/CIDADE NOVA/04.png',
+      '/images/obras/CIDADE NOVA/05.png',
+      '/images/obras/CIDADE NOVA/06.png',
+      '/images/obras/CIDADE NOVA/07.png',
+      '/images/obras/CIDADE NOVA/08.png',
+      '/images/obras/CIDADE NOVA/09.png',
     ],
     gallery: [
-      'src/assets/images/obras/CIDADE NOVA/02.png',
-      'src/assets/images/obras/CIDADE NOVA/03.png'
+      '/images/obras/CIDADE NOVA/02.png',
+      '/images/obras/CIDADE NOVA/03.png'
     ],
     price: '$298,000',
     sections: [
@@ -68,16 +68,16 @@ export const portfolioData: PortfolioProject[] = [
     overviewDetailed: 'O Bloco Habitacional Quinta do Pinheiro afirma-se como um dos maiores edifícios residenciais da cidade da Covilhã. Este projeto de grande envergadura reflete a capacidade de execução logística e técnica da Virgílio Roque, aliando engenharia robusta a um design contemporâneo.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      'src/assets/images/obras/quinta do pinheiro/01.jpg',
-      'src/assets/images/obras/quinta do pinheiro/02.jpg',
-      'src/assets/images/obras/quinta do pinheiro/03.jpg',
-      'src/assets/images/obras/quinta do pinheiro/04.jpg',
-      'src/assets/images/obras/quinta do pinheiro/05.jpg',
-      'src/assets/images/obras/quinta do pinheiro/06.jpg',
-      'src/assets/images/obras/quinta do pinheiro/07.jpg'    ],
+      '/images/obras/quinta do pinheiro/01.jpg',
+      '/images/obras/quinta do pinheiro/02.jpg',
+      '/images/obras/quinta do pinheiro/03.jpg',
+      '/images/obras/quinta do pinheiro/04.jpg',
+      '/images/obras/quinta do pinheiro/05.jpg',
+      '/images/obras/quinta do pinheiro/06.jpg',
+      '/images/obras/quinta do pinheiro/07.jpg'    ],
     gallery: [
-      'src/assets/images/obras/quinta do pinheiro/02.jpg',
-      'src/assets/images/obras/quinta do pinheiro/03.jpg'
+      '/images/obras/quinta do pinheiro/02.jpg',
+      '/images/obras/quinta do pinheiro/03.jpg'
     ],
     price: '$298,000',
     sections: [
@@ -103,14 +103,14 @@ export const portfolioData: PortfolioProject[] = [
     overviewDetailed: 'Localizado numa zona de excelência e de elevada procura na Covilhã, junto à Faculdade de Medicina da UBI e ao Hospital, este edifício residencial reflete o padrão de rigor e qualidade construtiva da Virgílio Roque. Projetado para oferecer uma excelente oportunidade de investimento ou habitação própria, o empreendimento destaca-se pela modernidade, eficiência energética e centralidade.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      'src/assets/images/obras/faculdade de medicina/01.png',
-      'src/assets/images/obras/faculdade de medicina/02.png',
-      'src/assets/images/obras/faculdade de medicina/04.png',
-      'src/assets/images/obras/faculdade de medicina/05.png',
+      '/images/obras/faculdade de medicina/01.png',
+      '/images/obras/faculdade de medicina/02.png',
+      '/images/obras/faculdade de medicina/04.png',
+      '/images/obras/faculdade de medicina/05.png',
     ],
     gallery: [
-      'src/assets/images/obras/faculdade de medicina/02.png',
-      'src/assets/images/obras/faculdade de medicina/04.png'
+      '/images/obras/faculdade de medicina/02.png',
+      '/images/obras/faculdade de medicina/04.png'
     ],
     price: '$298,000',
     sections: [
@@ -150,23 +150,23 @@ export const portfolioData: PortfolioProject[] = [
     overviewDetailed: 'Situada na tranquilidade do Peso, a nova Estrutura Residencial para Pessoas Idosas (ERPI) reflete o compromisso da Virgílio Roque com a construção de equipamentos sociais de elevada exigência técnica. Este projeto combina arquitetura funcional, rigor normativo e espaços dedicados ao conforto e à segurança máxima dos utentes e profissionais.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      'src/assets/images/obras/lar/lar covialvi.mp4',
-      'src/assets/images/obras/lar/ERPI001.png',
-      'src/assets/images/obras/lar/ERPI002.png',
-      'src/assets/images/obras/lar/ERPI003.png',
-      'src/assets/images/obras/lar/ERPI004.png',
-      'src/assets/images/obras/lar/ERPI005.png',
-      'src/assets/images/obras/lar/ERPI006.png',
-      'src/assets/images/obras/lar/ERPI007.png',
-      'src/assets/images/obras/lar/ERPI008.png',
-      'src/assets/images/obras/lar/ERPI009.png',
-      'src/assets/images/obras/lar/ERPI010.png',
-      'src/assets/images/obras/lar/ERPI011.png',
-      'src/assets/images/obras/lar/ERPI015.png'
+      '/images/obras/lar/lar covialvi.mp4',
+      '/images/obras/lar/ERPI001.png',
+      '/images/obras/lar/ERPI002.png',
+      '/images/obras/lar/ERPI003.png',
+      '/images/obras/lar/ERPI004.png',
+      '/images/obras/lar/ERPI005.png',
+      '/images/obras/lar/ERPI006.png',
+      '/images/obras/lar/ERPI007.png',
+      '/images/obras/lar/ERPI008.png',
+      '/images/obras/lar/ERPI009.png',
+      '/images/obras/lar/ERPI010.png',
+      '/images/obras/lar/ERPI011.png',
+      '/images/obras/lar/ERPI015.png'
     ],
     gallery: [
-      'src/assets/images/obras/lar/ERPI004.png',
-      'src/assets/images/obras/lar/ERPI015.png'
+      '/images/obras/lar/ERPI004.png',
+      '/images/obras/lar/ERPI015.png'
     ],
     price: '$20,000,000',
     sections: [
@@ -216,11 +216,11 @@ export const portfolioData: PortfolioProject[] = [
     overviewDetailed: 'Empreitada de modernização e requalificação da Estação Ferroviária do Tortosendo, adaptando esta infraestrutura pública aos exigentes padrões atuais de segurança, conforto e mobilidade regional.',
     // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      'src/assets/images/obras/estacao torotosendo/01.jpg'
+      '/images/obras/estacao torotosendo/01.jpg'
     ],
     gallery: [
-      'src/assets/images/obras/estacao torotosendo/02.jpg',
-      'src/assets/images/obras/estacao torotosendo/03.jpg'
+      '/images/obras/estacao torotosendo/02.jpg',
+      '/images/obras/estacao torotosendo/03.jpg'
     ],
     price: '$20,000,000',
     sections: [
