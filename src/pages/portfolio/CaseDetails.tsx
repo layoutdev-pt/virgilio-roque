@@ -85,7 +85,7 @@ export default function CaseDetails() {
           <div className="lg:col-span-8 relative rounded-3xl overflow-hidden shadow-sm group bg-gray-100 min-h-[400px]">
             {project.coverImages[currentImageIndex].endsWith('.mp4') ? (
               <video
-                src={'/' + project.coverImages[currentImageIndex]}
+                src={project.coverImages[currentImageIndex]}
                 autoPlay
                 loop
                 muted
@@ -94,7 +94,7 @@ export default function CaseDetails() {
               />
             ) : (
               <img 
-                src={'/' + project.coverImages[currentImageIndex]} 
+                src={project.coverImages[currentImageIndex]} 
                 alt={project.title} 
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
@@ -144,7 +144,7 @@ export default function CaseDetails() {
             {project.gallery && project.gallery.slice(0, 2).map((img, idx) => (
               <div key={idx} className="flex-1 relative w-full rounded-2xl overflow-hidden shadow-sm">
                 <img 
-                  src={'/' + img} 
+                  src={img} 
                   alt={`Galeria secundária ${idx + 1}`} 
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
