@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FFFAFA;
+  --color-surface: #EAECF1;
+  --color-contrast: #0A1119;
+  --color-primary: #FF8D03;
+  --color-sec: #FFB703;
+  --font-sora: "Sora", "Sora Placeholder", sans-serif;
+}
+
+@layer base {
+  * {
+    font-weight: 500 !important;
+  }
+  body {
+    font-family: var(--font-sora);
+    font-weight: 500;
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+  .animate-shadow-pulse {
+    animation: shadowPulse 2s infinite;
+  }
+  @keyframes shadowPulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  /* Mobile (<640px): 80vw item */
+  .carousel-viewport {
+    container-type: inline-size;
+  }
+
+  .carousel-portfolio-track {
+    --item-width: 80vw;
+    /* Shifts the track to align the active item's center with the container's center */
+    transform: translateX(calc(-1 * var(--current-index) * var(--item-width) + 50cqw - (var(--item-width) / 2)));
+  }
+  
+  /* sm (>=640px): 400px item */
+  @media (min-width: 640px) {
+    .carousel-portfolio-track {
+      --item-width: 400px;
+    }
+  }
+
+  /* md (>=768px): 450px item */
+  @media (min-width: 768px) {
+    .carousel-portfolio-track {
+      --item-width: 450px;
+    }
+  }
+}
