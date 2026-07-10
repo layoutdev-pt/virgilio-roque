@@ -82,7 +82,7 @@ export const BentoGallery: React.FC = () => {
               className={`relative group overflow-hidden rounded-2xl cursor-pointer bg-surface block ${getGridSpan(index)}`}
             >
               <img
-                src={"/" + item.image}
+                src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
