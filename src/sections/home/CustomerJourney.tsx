@@ -71,13 +71,7 @@ export const CustomerJourney: React.FC = () => {
             style={{ width: isVisible ? '75%' : '0%' }}
           ></div>
           
-          {/* Linha vertical Base (Mobile) */}
-          <div className="md:hidden absolute left-1/2 top-[48px] bottom-[48px] w-[1px] -translate-x-1/2 bg-surface/20 z-0"></div>
-          {/* Linha vertical Animada (Mobile) */}
-          <div 
-            className="md:hidden absolute left-1/2 top-[48px] w-[1px] -translate-x-1/2 bg-primary z-0 transition-all duration-[2000ms] ease-linear" 
-            style={{ height: isVisible ? 'calc(100% - 96px)' : '0%' }}
-          ></div>
+          {/* Linhas verticais (Mobile) removidas a pedido do utilizador */}
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-6 relative z-10">
             {steps.map((step, index) => {
