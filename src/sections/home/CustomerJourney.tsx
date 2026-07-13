@@ -21,8 +21,8 @@ const steps = [
   },
   {
     id: 4,
-    title: "Entrega da Chave",
-    description: "O seu novo espaço está pronto. Entregamos o projeto \"chave na mão\", pronto a ser vivido ou rentabilizado.",
+    title: "Entrega do Trabalho",
+    description: "O seu novo espaço está pronto. Entregamos o projeto, pronto a ser vivido ou rentabilizado.",
     icon: "https://api.iconify.design/lucide:key.svg"
   }
 ];

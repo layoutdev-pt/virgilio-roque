@@ -12,7 +12,7 @@ export const statsData: Service[] = [
     id: "stat-1",
     number: "01",
     title: "Projetos à Medida",
-    description: "Qualidade e atenção aos detalhes",
+    description: "Construímos com qualidade e profissionalismo tendo sempre atenção aos detalhes",
     iconName: "https://api.iconify.design/lucide:ruler.svg",
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -21,7 +21,7 @@ export const statsData: Service[] = [
     id: "stat-2",
     number: "02",
     title: "Rigor e Ética",
-    description: "Transparência em todas as relações",
+    description: "Maxima transparência em todas as relacoes",
     iconName: "https://api.iconify.design/lucide:scale.svg",
     image:
       "https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -30,7 +30,7 @@ export const statsData: Service[] = [
     id: "stat-3",
     number: "03",
     title: "Design Inovador",
-    description: "Técnicas modernas e soluções avançadas.",
+    description: "Procuramos sempre inovar utilizando as técnicas mais recentes e as solução mais avançadas",
     iconName: "https://api.iconify.design/lucide:lightbulb.svg",
     image:
       "https://images.unsplash.com/photo-1503694978374-8a2fa686963a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
@@ -41,7 +41,7 @@ export const servicesData: Service[] = [
   {
     id: "exp-1",
     number: "01",
-    title: "Projeto Habitacional",
+    title: "Projetos Habitacionais",
     description:
       "Moradias e complexos residenciais focados na inovação e na qualidade.",
     iconName: "https://api.iconify.design/lucide:hard-hat.svg",
@@ -52,7 +52,7 @@ export const servicesData: Service[] = [
     number: "02",
     title: "Reabilitação Urbana",
     description:
-      "Devolver vida a edifícios, valorizando o património e a sustentabilidade",
+      "Devolvemos vida a edifícios, valorizando o património, o ambiente e a sustentabilidade",
     iconName: "https://api.iconify.design/lucide:hammer.svg",
     image: imgExp2,
   },
@@ -61,7 +61,7 @@ export const servicesData: Service[] = [
     number: "03",
     title: "Setor Social",
     description:
-      "Obras especializadas para o setor geriátrico e equipamentos de apoio social",
+      "Grande experiência em construção de equipamentos destinados a geriatria e equipamentos de apoio social",
     iconName: "https://api.iconify.design/lucide:building-2.svg",
     image: imgExp3,
   },
@@ -70,7 +70,7 @@ export const servicesData: Service[] = [
     number: "04",
     title: "Obras Públicas",
     description:
-      "Infraestruturas e projetos públicos entregues com rigor, dentro do prazo.",
+      "Construção de infraestruturas e edifícios destinados ao setor publico com a qualidade e exigência que o mercado exige.",
     iconName: "https://api.iconify.design/lucide:wrench.svg",
     image: imgExp4,
   },
@@ -140,7 +140,7 @@ export const Experience: React.FC = () => {
             <div className="h-[1px] w-8 bg-contrast/30"></div>
           </div>
           <h2 className="text-3xl md:text-5xl text-contrast font-bold max-w-2xl leading-tight">
-            A Especialização que o Seu Projeto Exige
+            Temos a Equipa Especializada que o seu Projeto Exige
           </h2>
         </div>
 
@@ -163,7 +163,7 @@ export const Experience: React.FC = () => {
         <div className="text-center">
           <p className="text-xl md:text-xl text-contrast/80">
             Evite o esforço da procura pela solução ideal. A nossa equipa está
-            pronta.{" "}
+            pronta a ajudá-lo.{" "}
             <span 
               onClick={() => navigate('/contactos')}
               className="font-bold text-primary cursor-pointer hover:text-contrast transition-colors"
