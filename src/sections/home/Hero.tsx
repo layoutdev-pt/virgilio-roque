@@ -37,8 +37,8 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="w-full min-h-screen flex flex-col  bg-surface p-[30px] sm:p-[30px]">
-      <div className="relative flex-grow rounded-[30px] overflow-hidden flex flex-col shadow-2xl bg-gray-900 group">
+    <section className="w-full min-h-[50vh] md:min-h-screen flex flex-col bg-surface p-4 sm:p-[30px]">
+      <div className="relative flex-grow rounded-2xl sm:rounded-[30px] overflow-hidden flex flex-col shadow-2xl bg-gray-900 group">
         
         {/* Carousel Background */}
         {heroImages.map((src, idx) => (
@@ -55,20 +55,20 @@ export const Hero: React.FC = () => {
         {/* Carousel Navigation Arrows */}
         <button 
           onClick={handlePrev}
-          className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-surface/80 hover:bg-surface backdrop-blur-md rounded-full text-primary shadow-lg transition-all duration-300 z-20 opacity-0 group-hover:opacity-100"
+          className="absolute top-1/2 left-2 sm:left-4 md:left-8 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-surface/80 hover:bg-surface backdrop-blur-md rounded-full text-primary shadow-lg transition-all duration-300 z-20 opacity-100 md:opacity-0 md:group-hover:opacity-100"
           aria-label="Imagem Anterior"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
         </button>
         
         <button 
           onClick={handleNext}
-          className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-surface/80 hover:bg-surface backdrop-blur-md rounded-full text-primary shadow-lg transition-all duration-300 z-20 opacity-0 group-hover:opacity-100"
+          className="absolute top-1/2 right-2 sm:right-4 md:right-8 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-surface/80 hover:bg-surface backdrop-blur-md rounded-full text-primary shadow-lg transition-all duration-300 z-20 opacity-100 md:opacity-0 md:group-hover:opacity-100"
           aria-label="Próxima Imagem"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 sm:w-6 sm:h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
         </button>
