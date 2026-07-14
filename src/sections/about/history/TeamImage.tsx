@@ -1,5 +1,5 @@
 import React from 'react';
-import equipaImg from '../../../assets/images/random/equipa.webp';
+import equipaImg from '@/assets/images/random/equipa.webp';
 
 export const TeamImage: React.FC = () => {
   return (

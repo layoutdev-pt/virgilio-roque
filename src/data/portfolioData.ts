@@ -1,4 +1,51 @@
-import type { PortfolioProject } from '../types/types';
+﻿import type { PortfolioProject } from '@/types/types';
+
+// Importação estática das imagens (necessário no Vite para que sejam devidamente empacotadas no build)
+// CIDADE NOVA
+import cn01 from '@/assets/images/obras/CIDADE NOVA/01.png';
+import cn02 from '@/assets/images/obras/CIDADE NOVA/02.png';
+import cn03 from '@/assets/images/obras/CIDADE NOVA/03.png';
+import cn04 from '@/assets/images/obras/CIDADE NOVA/04.png';
+import cn05 from '@/assets/images/obras/CIDADE NOVA/05.png';
+import cn06 from '@/assets/images/obras/CIDADE NOVA/06.png';
+import cn07 from '@/assets/images/obras/CIDADE NOVA/07.png';
+import cn08 from '@/assets/images/obras/CIDADE NOVA/08.png';
+import cn09 from '@/assets/images/obras/CIDADE NOVA/09.png';
+
+// QUINTA DO PINHEIRO
+import qp01 from '@/assets/images/obras/quinta do pinheiro/01.jpg';
+import qp02 from '@/assets/images/obras/quinta do pinheiro/02.jpg';
+import qp03 from '@/assets/images/obras/quinta do pinheiro/03.jpg';
+import qp04 from '@/assets/images/obras/quinta do pinheiro/04.jpg';
+import qp05 from '@/assets/images/obras/quinta do pinheiro/05.jpg';
+import qp06 from '@/assets/images/obras/quinta do pinheiro/06.jpg';
+import qp07 from '@/assets/images/obras/quinta do pinheiro/07.jpg';
+
+// FACULDADE DE MEDICINA
+import fm01 from '@/assets/images/obras/faculdade de medicina/01.png';
+import fm02 from '@/assets/images/obras/faculdade de medicina/02.png';
+import fm04 from '@/assets/images/obras/faculdade de medicina/04.png';
+import fm05 from '@/assets/images/obras/faculdade de medicina/05.png';
+
+// ERPI DO PESO
+import larVideo from '@/assets/images/obras/lar/lar covialvi.mp4';
+import lar01 from '@/assets/images/obras/lar/ERPI001.png';
+import lar02 from '@/assets/images/obras/lar/ERPI002.png';
+import lar03 from '@/assets/images/obras/lar/ERPI003.png';
+import lar04 from '@/assets/images/obras/lar/ERPI004.png';
+import lar05 from '@/assets/images/obras/lar/ERPI005.png';
+import lar06 from '@/assets/images/obras/lar/ERPI006.png';
+import lar07 from '@/assets/images/obras/lar/ERPI007.png';
+import lar08 from '@/assets/images/obras/lar/ERPI008.png';
+import lar09 from '@/assets/images/obras/lar/ERPI009.png';
+import lar10 from '@/assets/images/obras/lar/ERPI010.png';
+import lar11 from '@/assets/images/obras/lar/ERPI011.png';
+import lar15 from '@/assets/images/obras/lar/ERPI015.png';
+
+// ESTAÇÃO TORTOSENDO
+import et01 from '@/assets/images/obras/estacao torotosendo/01.jpg';
+import et02 from '@/assets/images/obras/estacao torotosendo/02.jpg';
+import et03 from '@/assets/images/obras/estacao torotosendo/03.jpg';
 
 export const portfolioData: PortfolioProject[] = [
   {
@@ -7,21 +54,11 @@ export const portfolioData: PortfolioProject[] = [
     location: 'Covilhã, Portugal',
     overviewSummary: 'Condomínio moderno no coração da Covilhã com apartamentos de tipologias variadas e acabamentos de alta qualidade.',
     overviewDetailed: 'Situado numa localização estratégica no centro da Covilhã, junto à Faculdade e a diversas escolas, o empreendimento Cidade Nova reflete o compromisso da Virgílio Roque com a construção de alta qualidade. Este condomínio fechado combina arquitetura contemporânea, rigor técnico e espaços de lazer exclusivos.',
-    // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      '/images/obras/CIDADE NOVA/01.png',
-      '/images/obras/CIDADE NOVA/02.png',
-      '/images/obras/CIDADE NOVA/03.png',
-      '/images/obras/CIDADE NOVA/04.png',
-      '/images/obras/CIDADE NOVA/05.png',
-      '/images/obras/CIDADE NOVA/06.png',
-      '/images/obras/CIDADE NOVA/07.png',
-      '/images/obras/CIDADE NOVA/08.png',
-      '/images/obras/CIDADE NOVA/09.png',
+      cn01, cn02, cn03, cn04, cn05, cn06, cn07, cn08, cn09
     ],
     gallery: [
-      '/images/obras/CIDADE NOVA/02.png',
-      '/images/obras/CIDADE NOVA/03.png'
+      cn02, cn03
     ],
     sections: [
       {
@@ -67,18 +104,11 @@ export const portfolioData: PortfolioProject[] = [
     location: 'Covilhã, Portugal',
     overviewSummary: 'Um dos maiores blocos habitacionais da cidade da Covilhã, este empreendimento residencial de grande escala destaca-se pela robustez construtiva e elevado padrão de qualidade.',
     overviewDetailed: 'O Bloco Habitacional Quinta do Pinheiro afirma-se como um dos maiores edifícios residenciais da cidade da Covilhã. Este projeto de grande envergadura reflete a capacidade de execução logística e técnica da Virgílio Roque, aliando engenharia robusta a um design contemporâneo.',
-    // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      '/images/obras/quinta do pinheiro/01.jpg',
-      '/images/obras/quinta do pinheiro/02.jpg',
-      '/images/obras/quinta do pinheiro/03.jpg',
-      '/images/obras/quinta do pinheiro/04.jpg',
-      '/images/obras/quinta do pinheiro/05.jpg',
-      '/images/obras/quinta do pinheiro/06.jpg',
-      '/images/obras/quinta do pinheiro/07.jpg'    ],
+      qp01, qp02, qp03, qp04, qp05, qp06, qp07
+    ],
     gallery: [
-      '/images/obras/quinta do pinheiro/02.jpg',
-      '/images/obras/quinta do pinheiro/03.jpg'
+      qp02, qp03
     ],
     sections: [
       {
@@ -102,16 +132,11 @@ export const portfolioData: PortfolioProject[] = [
     location: 'Covilhã, Portugal',
     overviewSummary: 'Edifício residencial junto à Faculdade de Medicina da UBI, ideal para investimento ou habitação própria.',
     overviewDetailed: 'Localizado numa zona de excelência e de elevada procura na Covilhã, junto à Faculdade de Medicina da UBI e ao Hospital, este edifício residencial reflete o padrão de rigor e qualidade construtiva da Virgílio Roque. Projetado para oferecer uma excelente oportunidade de investimento ou habitação própria, o empreendimento destaca-se pela modernidade, eficiência energética e centralidade.',
-    // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      '/images/obras/faculdade de medicina/01.png',
-      '/images/obras/faculdade de medicina/02.png',
-      '/images/obras/faculdade de medicina/04.png',
-      '/images/obras/faculdade de medicina/05.png',
+      fm01, fm02, fm04, fm05
     ],
     gallery: [
-      '/images/obras/faculdade de medicina/02.png',
-      '/images/obras/faculdade de medicina/04.png'
+      fm02, fm04
     ],
     sections: [
       {
@@ -149,25 +174,11 @@ export const portfolioData: PortfolioProject[] = [
     location: 'Peso, Covilhã, Portugal',
     overviewSummary: 'Equipamento social moderno situado na freguesia do Peso, concebido com instalações de alta qualidade para oferecer conforto, segurança e cuidados de excelência à população sénior.',
     overviewDetailed: 'Situada na tranquilidade do Peso, a nova Estrutura Residencial para Pessoas Idosas (ERPI) reflete o compromisso da Virgílio Roque com a construção de equipamentos sociais de elevada exigência técnica. Este projeto combina arquitetura funcional, rigor normativo e espaços dedicados ao conforto e à segurança máxima dos utentes e profissionais.',
-    // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      '/images/obras/lar/lar covialvi.mp4',
-      '/images/obras/lar/ERPI001.png',
-      '/images/obras/lar/ERPI002.png',
-      '/images/obras/lar/ERPI003.png',
-      '/images/obras/lar/ERPI004.png',
-      '/images/obras/lar/ERPI005.png',
-      '/images/obras/lar/ERPI006.png',
-      '/images/obras/lar/ERPI007.png',
-      '/images/obras/lar/ERPI008.png',
-      '/images/obras/lar/ERPI009.png',
-      '/images/obras/lar/ERPI010.png',
-      '/images/obras/lar/ERPI011.png',
-      '/images/obras/lar/ERPI015.png'
+      larVideo, lar01, lar02, lar03, lar04, lar05, lar06, lar07, lar08, lar09, lar10, lar11, lar15
     ],
     gallery: [
-      '/images/obras/lar/ERPI004.png',
-      '/images/obras/lar/ERPI015.png'
+      lar04, lar15
     ],
     sections: [
       {
@@ -209,19 +220,17 @@ export const portfolioData: PortfolioProject[] = [
     ],
     quote: 'ENGENHARIA E BEM-ESTAR NO PESO'
   },
-    {
+  {
     id: 'estacao-tortosendo',
     title: 'ESTAÇÃO TORTOSENDO',
     location: 'Tortosendo, Covilhã, Portugal',
     overviewSummary: 'Requalificação e modernização integral da Estação Ferroviária do Tortosendo, focada na melhoria das acessibilidades, segurança e durabilidade das infraestruturas para todos os utentes.',
     overviewDetailed: 'Empreitada de modernização e requalificação da Estação Ferroviária do Tortosendo, adaptando esta infraestrutura pública aos exigentes padrões atuais de segurança, conforto e mobilidade regional.',
-    // Adiciona as tuas imagens separadas por vírgula para alimentar o carrossel
     coverImages: [
-      '/images/obras/estacao torotosendo/01.jpg'
+      et01
     ],
     gallery: [
-      '/images/obras/estacao torotosendo/02.jpg',
-      '/images/obras/estacao torotosendo/03.jpg'
+      et02, et03
     ],
     sections: [
       {

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PageHero } from '../sections/shared/PageHero';
+import { PageHero } from '@/sections/shared/PageHero';
 
 // Icons using SVG to keep it consistent
 const MapPinIcon = ({ className = "" }) => (

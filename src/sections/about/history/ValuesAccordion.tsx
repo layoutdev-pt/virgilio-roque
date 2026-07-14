@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import img1 from '../../../assets/images/random/quadro_1-4/quadro_01.webp';
-import img2 from '../../../assets/images/random/quadro_1-4/quadro_02.webp';
-import img3 from '../../../assets/images/random/quadro_1-4/quadro_03.webp';
-import img4 from '../../../assets/images/random/quadro_1-4/quadro_04.webp';
+import img1 from '@/assets/images/random/quadro_1-4/quadro_01.webp';
+import img2 from '@/assets/images/random/quadro_1-4/quadro_02.webp';
+import img3 from '@/assets/images/random/quadro_1-4/quadro_03.webp';
+import img4 from '@/assets/images/random/quadro_1-4/quadro_04.webp';
 
 const valuesData = [
   {

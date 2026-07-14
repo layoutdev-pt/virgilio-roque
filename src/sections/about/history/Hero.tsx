@@ -1,5 +1,5 @@
 import React from 'react';
-import watermark from '../../../assets/images/logos/virgilio_roque/WEBP/totalmente_branco.webp';
+import watermark from '@/assets/images/logos/virgilio_roque/WEBP/totalmente_branco.webp';
 
 export const Hero: React.FC = () => {
   return (

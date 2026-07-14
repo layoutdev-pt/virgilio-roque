@@ -1,10 +1,10 @@
-import React from 'react';
-import logoPrincipal from '../../assets/images/logos/virgilio_roque/PNG/Principal.png';
-import logoMonteSerrano from '../../assets/images/logos/Monte_Serrano.webp';
-import logoCovialvi from '../../assets/images/logos/logotiposnovoCovialvi/Logo-Preto-SemFundo-PNG.png';
-import imgBuilding from '../../assets/images/random/building.webp';
-import imgConstruction from '../../assets/images/random/construction.webp';
-import imgMatiMateriais from '../../assets/images/logos/Mati_Materiais.webp';
+﻿import React from 'react';
+import logoPrincipal from '@/assets/images/logos/virgilio_roque/PNG/Principal.png';
+import logoMonteSerrano from '@/assets/images/logos/Monte_Serrano.webp';
+import logoCovialvi from '@/assets/images/logos/logotiposnovoCovialvi/Logo-Preto-SemFundo-PNG.png';
+import imgBuilding from '@/assets/images/random/building.webp';
+import imgConstruction from '@/assets/images/random/construction.webp';
+import imgMatiMateriais from '@/assets/images/logos/Mati_Materiais.webp';
 
 const TextSection = () => (
   <div className="flex flex-col items-center text-center px-4 mb-8 md:mb-10">

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logoPrincipal from "../../assets/images/logos/virgilio_roque/PNG/Horizontal.png";
-import logoIcon from "../../assets/images/logos/virgilio_roque/PNG/icon_sem-fundo.png";
-import bgDropdown from "../../assets/images/random/vr_background.png";
+import logoPrincipal from "@/assets/images/logos/virgilio_roque/PNG/Horizontal.png";
+import logoIcon from "@/assets/images/logos/virgilio_roque/PNG/icon_sem-fundo.png";
+import bgDropdown from "@/assets/images/random/vr_background.png";
 
 // --- Icons (SVGs) ---
 const ChevronDown = ({ className = "" }) => (

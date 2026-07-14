@@ -1,5 +1,5 @@
-import React from 'react';
-import thumbnail from '../../assets/images/random/thumbnail.webp';
+﻿import React from 'react';
+import thumbnail from '@/assets/images/random/thumbnail.webp';
 
 export const ValueContact: React.FC = () => {
   return (

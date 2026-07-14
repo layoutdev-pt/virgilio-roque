@@ -1,6 +1,6 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logos/virgilio_roque/PNG/Principal_fundos_escuros.png';
+import logo from '@/assets/images/logos/virgilio_roque/PNG/Principal_fundos_escuros.png';
 
 export const Footer: React.FC = () => {
   return (

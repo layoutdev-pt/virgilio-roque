@@ -1,9 +1,9 @@
 import React from 'react';
-import { PageHero } from '../../sections/shared/PageHero';
-import { TeamImage } from '../../sections/about/history/TeamImage';
-import GroupCompanies from '../../sections/shared/GroupCompanies';
-import { ValuesAccordion } from '../../sections/about/history/ValuesAccordion';
-import { Timeline } from '../../sections/about/history/Timeline';
+import { PageHero } from '@/sections/shared/PageHero';
+import { TeamImage } from '@/sections/about/history/TeamImage';
+import GroupCompanies from '@/sections/shared/GroupCompanies';
+import { ValuesAccordion } from '@/sections/about/history/ValuesAccordion';
+import { Timeline } from '@/sections/about/history/Timeline';
 
 export const History: React.FC = () => {
   return (

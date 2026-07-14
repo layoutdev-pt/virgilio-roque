@@ -1,5 +1,5 @@
-import { PageHero } from '../../sections/shared/PageHero';
-import { RecruitmentForm } from '../../sections/about/recruitment/RecruitmentForm';
+﻿import { PageHero } from '@/sections/shared/PageHero';
+import { RecruitmentForm } from '@/sections/about/recruitment/RecruitmentForm';
 
 export default function Recruitment() {
   return (

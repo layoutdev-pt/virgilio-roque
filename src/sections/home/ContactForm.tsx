@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import bgImage from '../../assets/images/random/obra_de_predio.webp';
+import bgImage from '@/assets/images/random/obra_de_predio.webp';
 
 // Custom Dropdown Component to match the design perfectly
 const CustomSelect = ({ 

@@ -1,8 +1,8 @@
 // src/pages/portfolio/CaseDetails.tsx
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { PageHero } from '../../sections/shared/PageHero';
-import { portfolioData } from '../../data/portfolioData';
+import { PageHero } from '@/sections/shared/PageHero';
+import { portfolioData } from '@/data/portfolioData';
 
 export default function CaseDetails() {
   const { id } = useParams<{ id: string }>();
@@ -83,22 +83,29 @@ export default function CaseDetails() {
           
           {/* Imagem Principal (8 colunas) */}
           <div className="lg:col-span-8 relative rounded-3xl overflow-hidden shadow-sm group bg-gray-100 min-h-[400px]">
-            {project.coverImages[currentImageIndex].endsWith('.mp4') ? (
-              <video
-                src={project.coverImages[currentImageIndex]}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <img 
-                src={project.coverImages[currentImageIndex]} 
-                alt={project.title} 
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-            )}
+            {project.coverImages.map((media, idx) => (
+              <div 
+                key={idx}
+                className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${idx === currentImageIndex ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+              >
+                {media.endsWith('.mp4') ? (
+                  <video
+                    src={media}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <img 
+                    src={media} 
+                    alt={`${project.title} - ${idx + 1}`} 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                )}
+              </div>
+            ))}
 
             {/* Controlos de Navegação do Carrossel (Visíveis no Hover) */}
             {project.coverImages.length > 1 && (

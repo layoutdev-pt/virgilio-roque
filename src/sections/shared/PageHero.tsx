@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import watermark from '../../assets/images/logos/virgilio_roque/WEBP/totalmente_branco.webp';
+﻿import React, { useState, useEffect } from 'react';
+import watermark from '@/assets/images/logos/virgilio_roque/WEBP/totalmente_branco.webp';
 
 interface PageHeroProps {
   title: string;

@@ -1,6 +1,6 @@
-import React from 'react';
-import { PageHero } from '../../../sections/shared/PageHero';
-import { RecruitmentForm } from '../../../sections/about/recruitment/RecruitmentForm';
+﻿import React from 'react';
+import { PageHero } from '@/sections/shared/PageHero';
+import { RecruitmentForm } from '@/sections/about/recruitment/RecruitmentForm';
 
 export const Recruitment: React.FC = () => {
   return (

@@ -1,5 +1,5 @@
-import { PageHero } from '../sections/shared/PageHero';
-import { BentoGallery } from '../sections/portfolio/BentoGallery';
+﻿import { PageHero } from '@/sections/shared/PageHero';
+import { BentoGallery } from '@/sections/portfolio/BentoGallery';
 
 export default function Portfolio() {
   return (

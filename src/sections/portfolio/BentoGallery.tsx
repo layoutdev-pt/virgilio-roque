@@ -1,36 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import imgCidadeNova from "@/assets/images/obras/CIDADE NOVA/01.png";
+import imgQuintaPinheiro from "@/assets/images/obras/quinta do pinheiro/01.jpg";
+import imgFaculdade from "@/assets/images/obras/faculdade de medicina/04.png";
+import imgEstacao from "@/assets/images/obras/estacao torotosendo/01.jpg";
+import imgErpi from "@/assets/images/obras/lar/ERPI001.png";
+
 // Array dinâmico de projetos para popular a galeria Bento
 const portfolioItems = [
   {
     id: "cidade-nova",
     title: "Empreedimento Cidade Nova",
-    image: "/images/obras/CIDADE NOVA/01.png",
+    image: imgCidadeNova,
     description: "Covilhã",
   },
   {
     id: "quinta-do-pinheiro",
     title: "Bloco Habitacional - Quinta do Pinheiro",
-    image: "/images/obras/quinta do pinheiro/01.jpg",
+    image: imgQuintaPinheiro,
     description: "Covilhã",
   },
   {
     id: "faculdade-medicina",
     title: "Edifício junto à Faculdade de Medicina",
-    image: "/images/obras/faculdade de medicina/04.png",
+    image: imgFaculdade,
     description: "Covilhã",
   },
   {
     id: "estacao-tortosendo",
     title: "Estação de Tortosendo",
-    image: "/images/obras/estacao torotosendo/01.jpg",
+    image: imgEstacao,
     description: "Tortosendo",
   },
   {
     id: "erpi-do-peso",
     title: "ERPI do Peso",
-    image: "/images/obras/lar/ERPI001.png",
+    image: imgErpi,
     description: "Peso",
   },
   // {   id: 6, title: 'Ponte Rodoviária', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1200', description: 'Engenharia civil focada na mobilidade.' },

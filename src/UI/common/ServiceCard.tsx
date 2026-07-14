@@ -1,5 +1,5 @@
-import React from "react";
-import type { Service } from "../../types/types";
+﻿import React from "react";
+import type { Service } from "@/types/types";
 
 interface ServiceCardProps {
   service: Service;

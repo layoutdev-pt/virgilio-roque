@@ -1,5 +1,5 @@
-import React from 'react';
-import { PageHero } from '../../sections/shared/PageHero';
+﻿import React from 'react';
+import { PageHero } from '@/sections/shared/PageHero';
 
 const PrivacyPolicy: React.FC = () => {
   return (

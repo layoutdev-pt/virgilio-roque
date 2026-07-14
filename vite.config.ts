@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import Sitemap from 'vite-plugin-sitemap'
+import path from 'path'
 
 // O array deve ser substituído por uma chamada à API/Base de Dados no processo de build
 // para garantir que o sitemap nunca fica dessincronizado com os projetos reais.
@@ -16,6 +17,11 @@ const portfolioProjects = [
 const dynamicRoutes = portfolioProjects.map(id => `/portfolio/${id}`);
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),

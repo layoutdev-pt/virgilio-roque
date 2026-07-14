@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import type { Service } from "../../types/types";
+import type { Service } from "@/types/types";
 
-import imgExp1 from "../../assets/images/random/experiencia-1.jpeg";
-import imgExp2 from "../../assets/images/random/experiencia-2.jpeg";
-import imgExp3 from "../../assets/images/random/experiencia-3.jpeg";
-import imgExp4 from "../../assets/images/random/experiencia-4.jpeg";
+import imgExp1 from "@/assets/images/random/experiencia-1.jpeg";
+import imgExp2 from "@/assets/images/random/experiencia-2.jpeg";
+import imgExp3 from "@/assets/images/random/experiencia-3.jpeg";
+import imgExp4 from "@/assets/images/random/experiencia-4.jpeg";
 
 export const statsData: Service[] = [
   {
