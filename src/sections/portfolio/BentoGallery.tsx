@@ -5,7 +5,7 @@ import imgCidadeNova from "@/assets/images/obras/CIDADE NOVA/01.png";
 import imgQuintaPinheiro from "@/assets/images/obras/quinta do pinheiro/01.jpg";
 import imgFaculdade from "@/assets/images/obras/faculdade de medicina/04.png";
 import imgEstacao from "@/assets/images/obras/estacao torotosendo/01.jpg";
-import imgErpi from "@/assets/images/obras/lar/ERPI001.png";
+import imgErpi from "@/assets/images/obras/lar/ERPI001.webp";
 
 // Array dinâmico de projetos para popular a galeria Bento
 const portfolioItems = [

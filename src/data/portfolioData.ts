@@ -1,4 +1,4 @@
-﻿import type { PortfolioProject } from '@/types/types';
+import type { PortfolioProject } from '@/types/types';
 
 // Importação estática das imagens (necessário no Vite para que sejam devidamente empacotadas no build)
 // CIDADE NOVA
@@ -29,18 +29,18 @@ import fm05 from '@/assets/images/obras/faculdade de medicina/05.png';
 
 // ERPI DO PESO
 import larVideo from '@/assets/images/obras/lar/lar covialvi.mp4';
-import lar01 from '@/assets/images/obras/lar/ERPI001.png';
-import lar02 from '@/assets/images/obras/lar/ERPI002.png';
-import lar03 from '@/assets/images/obras/lar/ERPI003.png';
-import lar04 from '@/assets/images/obras/lar/ERPI004.png';
-import lar05 from '@/assets/images/obras/lar/ERPI005.png';
-import lar06 from '@/assets/images/obras/lar/ERPI006.png';
-import lar07 from '@/assets/images/obras/lar/ERPI007.png';
-import lar08 from '@/assets/images/obras/lar/ERPI008.png';
-import lar09 from '@/assets/images/obras/lar/ERPI009.png';
-import lar10 from '@/assets/images/obras/lar/ERPI010.png';
-import lar11 from '@/assets/images/obras/lar/ERPI011.png';
-import lar15 from '@/assets/images/obras/lar/ERPI015.png';
+import lar01 from '@/assets/images/obras/lar/ERPI001.webp';
+import lar02 from '@/assets/images/obras/lar/ERPI002.webp';
+import lar03 from '@/assets/images/obras/lar/ERPI003.webp';
+import lar04 from '@/assets/images/obras/lar/ERPI004.webp';
+import lar05 from '@/assets/images/obras/lar/ERPI005.webp';
+import lar06 from '@/assets/images/obras/lar/ERPI006.webp';
+import lar07 from '@/assets/images/obras/lar/ERPI007.webp';
+import lar08 from '@/assets/images/obras/lar/ERPI008.webp';
+import lar09 from '@/assets/images/obras/lar/ERPI009.webp';
+import lar10 from '@/assets/images/obras/lar/ERPI010.webp';
+import lar11 from '@/assets/images/obras/lar/ERPI011.webp';
+import lar15 from '@/assets/images/obras/lar/ERPI015.webp';
 
 // ESTAÇÃO TORTOSENDO
 import et01 from '@/assets/images/obras/estacao torotosendo/01.jpg';

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-// Import images
-const imgCidadeNova = "/images/obras/CIDADE NOVA/08.png";
-const imgEstacao = "/images/obras/estacao torotosendo/01.jpg";
-const imgFaculdade = "/images/obras/faculdade de medicina/01.png";
-const imgLar = "/images/obras/lar/ERPI001.png";
-const imgQuinta = "/images/obras/quinta do pinheiro/01.jpg";
+import imgCidadeNova from "@/assets/images/obras/CIDADE NOVA/08.png";
+import imgEstacao from "@/assets/images/obras/estacao torotosendo/01.jpg";
+import imgFaculdade from "@/assets/images/obras/faculdade de medicina/01.png";
+import imgLar from "@/assets/images/obras/lar/ERPI001.webp";
+import imgQuinta from "@/assets/images/obras/quinta do pinheiro/01.jpg";
 
 // Assets Extras
-const videoLar = "/images/obras/lar/lar covialvi.mp4";
+import videoLar from "@/assets/images/obras/lar/lar covialvi.mp4";
 
 import { Link } from "react-router-dom";
 
