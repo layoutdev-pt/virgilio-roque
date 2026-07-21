@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import img01 from '@/assets/images/random/corrocel_hero/01vr.png';
-import img02 from '@/assets/images/random/corrocel_hero/02vr.png';
-import img03 from '@/assets/images/random/corrocel_hero/03vr.png';
-import img04 from '@/assets/images/random/corrocel_hero/04vr.png';
-import img05 from '@/assets/images/random/corrocel_hero/05vr.png';
+import img01 from '@/assets/images/random/corrocel_hero/01vr.webp';
+import img02 from '@/assets/images/random/corrocel_hero/02vr.webp';
+import img03 from '@/assets/images/random/corrocel_hero/03vr.webp';
+import img04 from '@/assets/images/random/corrocel_hero/04vr.webp';
+import img05 from '@/assets/images/random/corrocel_hero/05vr.webp';
 import logoVirgilio from '@/assets/images/logos/virgilio_roque/PNG/Principal_fundos_escuros.png';
 
 const heroImages = [img01, img02, img03, img04, img05];
