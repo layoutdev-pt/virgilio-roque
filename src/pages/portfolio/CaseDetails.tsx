@@ -110,11 +110,11 @@ export default function CaseDetails() {
             {/* Controlos de Navegação do Carrossel (Visíveis no Hover) */}
             {project.coverImages.length > 1 && (
               <>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none" />
                 
                 <button 
                   onClick={handlePrev}
-                  className="absolute top-1/2 left-4 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white rounded-full text-primary shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  className="absolute z-20 top-1/2 left-4 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white rounded-full text-primary shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300"
                   aria-label="Imagem Anterior"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
@@ -123,7 +123,7 @@ export default function CaseDetails() {
                 </button>
                 <button 
                   onClick={handleNext}
-                  className="absolute top-1/2 right-4 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white rounded-full text-primary shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  className="absolute z-20 top-1/2 right-4 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-white/90 hover:bg-white rounded-full text-primary shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300"
                   aria-label="Próxima Imagem"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
@@ -132,7 +132,7 @@ export default function CaseDetails() {
                 </button>
 
                 {/* Indicadores Visuais (Dots) */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                <div className="absolute z-20 bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                   {project.coverImages.map((_, idx) => (
                     <button 
                       key={idx}
