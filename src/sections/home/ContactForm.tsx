@@ -1,4 +1,4 @@
-﻿import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import bgImage from '@/assets/images/random/obra_de_predio.webp';
 
@@ -6,14 +6,17 @@ import bgImage from '@/assets/images/random/obra_de_predio.webp';
 const CustomSelect = ({ 
   label, 
   options, 
-  placeholder 
+  placeholder,
+  value,
+  onChange
 }: { 
   label: string, 
   options: string[], 
-  placeholder: string 
+  placeholder: string,
+  value: string,
+  onChange: (val: string) => void
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
@@ -37,8 +40,8 @@ const CustomSelect = ({
             isOpen ? 'border-primary ring-1 ring-primary' : 'border-contrast/10 hover:border-contrast/30'
           }`}
         >
-          <span className={selected ? 'text-contrast' : 'text-contrast/40'}>
-            {selected || placeholder}
+          <span className={value ? 'text-contrast' : 'text-contrast/40'}>
+            {value || placeholder}
           </span>
           <svg 
             className={`w-5 h-5 text-contrast/40 transition-transform duration-200 ${isOpen ? 'rotate-180 text-primary' : ''}`} 
@@ -54,9 +57,9 @@ const CustomSelect = ({
             {options.map((opt) => (
               <div 
                 key={opt}
-                onClick={() => { setSelected(opt); setIsOpen(false); }}
+                onClick={() => { onChange(opt); setIsOpen(false); }}
                 className={`px-4 py-2.5 cursor-pointer text-contrast transition-colors ${
-                  selected === opt ? 'bg-primary/10 text-primary font-medium' : 'hover:bg-surface'
+                  value === opt ? 'bg-primary/10 text-primary font-medium' : 'hover:bg-surface'
                 }`}
               >
                 {opt}
@@ -71,11 +74,44 @@ const CustomSelect = ({
 
 export const ContactForm: React.FC = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    source: '',
+    message: ''
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Apenas submissão frontend para efeitos de demonstração
-    console.log("Formulário submetido!");
+    if (!isChecked) return;
+    
+    setStatus('loading');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', source: '', message: '' });
+        setIsChecked(false);
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   return (
@@ -114,6 +150,10 @@ export const ContactForm: React.FC = () => {
                 <label className="text-sm font-bold text-contrast">Nome Completo</label>
                 <input 
                   type="text" 
+                  id="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Ricardo Proença"
                   className="w-full border border-contrast/10 rounded-xl px-4 py-3 text-contrast placeholder:text-contrast/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white"
                 />
@@ -124,6 +164,10 @@ export const ContactForm: React.FC = () => {
                 <label className="text-sm font-bold text-contrast">Endereço De Email</label>
                 <input 
                   type="email" 
+                  id="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="ricardo@gmail.com"
                   className="w-full border border-contrast/10 rounded-xl px-4 py-3 text-contrast placeholder:text-contrast/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white"
                 />
@@ -134,6 +178,8 @@ export const ContactForm: React.FC = () => {
                 label="Assunto"
                 placeholder="Selecionar..."
                 options={["Conceção", "Construção", "Reabilitação"]}
+                value={formData.subject}
+                onChange={(val) => setFormData(prev => ({ ...prev, subject: val }))}
               />
 
               {/* Como Nos Conheceu (Dropdown customizado) */}
@@ -141,12 +187,18 @@ export const ContactForm: React.FC = () => {
                 label="Como Nos Conheceu?"
                 placeholder="Selecionar..."
                 options={["Redes Sociais", "Recomendação", "Pesquisa no Google", "Já conhecia", "Outros..."]}
+                value={formData.source}
+                onChange={(val) => setFormData(prev => ({ ...prev, source: val }))}
               />
 
               {/* Mensagem (Textarea) */}
               <div className="flex flex-col gap-2 md:col-span-2">
                 <label className="text-sm font-bold text-contrast">Mensagem</label>
                 <textarea 
+                  id="message"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={4}
                   placeholder="Escreva aqui"
                   className="w-full border border-contrast/10 rounded-xl px-4 py-3 text-contrast placeholder:text-contrast/30 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors bg-white resize-none"
@@ -156,7 +208,7 @@ export const ContactForm: React.FC = () => {
 
             {/* RGPD Consent */}
             <div className="mt-2 mb-4">
-              <label className="flex items-start gap-3 cursor-pointer group">
+              <label className="flex items-start gap-3 cursor-pointer group" onClick={(e) => { e.preventDefault(); setIsChecked(!isChecked); }}>
                 <div className={`relative flex items-center justify-center w-[18px] h-[18px] mt-0.5 rounded-[4px] border transition-colors shrink-0 ${
                   isChecked ? 'bg-primary border-primary' : 'border-contrast/30 bg-white group-hover:border-primary'
                 }`}>
@@ -171,6 +223,7 @@ export const ContactForm: React.FC = () => {
                   className="hidden" 
                   checked={isChecked}
                   onChange={() => setIsChecked(!isChecked)}
+                  required
                 />
                 <span className="text-[13px] leading-relaxed text-contrast/70 select-none">
                   Li e aceito os{' '}
@@ -181,16 +234,33 @@ export const ContactForm: React.FC = () => {
               </label>
             </div>
 
+            {/* Status Messages */}
+            {status === 'success' && (
+              <div className="bg-green-50 text-green-700 p-4 rounded-xl text-sm font-medium">
+                A sua mensagem foi enviada com sucesso!
+              </div>
+            )}
+            {status === 'error' && (
+              <div className="bg-red-50 text-red-700 p-4 rounded-xl text-sm font-medium">
+                Ocorreu um erro. Por favor, tente novamente.
+              </div>
+            )}
+
             {/* Submit CTA */}
             <div>
               <button 
                 type="submit"
-                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3.5 rounded-full font-bold hover:bg-primary/90 transition-all hover:shadow-lg active:scale-[0.98]"
+                disabled={status === 'loading'}
+                className={`inline-flex items-center gap-2 text-white px-8 py-3.5 rounded-full font-bold transition-all hover:shadow-lg ${
+                  status === 'loading' ? 'bg-gray-400 cursor-not-allowed' : 'bg-primary hover:bg-primary/90 active:scale-[0.98]'
+                }`}
               >
-                <span>Agendar Agora</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="m9 18 6-6-6-6"/>
-                </svg>
+                <span>{status === 'loading' ? 'A enviar...' : 'Agendar Agora'}</span>
+                {!status || status !== 'loading' && (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
+                  </svg>
+                )}
               </button>
             </div>
 

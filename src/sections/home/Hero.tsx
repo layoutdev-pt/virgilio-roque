@@ -85,6 +85,17 @@ export const Hero: React.FC = () => {
             className="w-2/3 md:w-1/2 lg:w-1/3 max-w-lg object-contain drop-shadow-2xl" 
           />
         </div>
+
+        {/* SEO H1 Tag - Fades in after logo fades out */}
+        <div 
+          className={`absolute inset-0 z-10 flex flex-col items-center justify-center transition-opacity duration-1000 pointer-events-none px-4 text-center ${
+            showLogo ? 'opacity-0' : 'opacity-100'
+          }`}
+        >
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-2xl max-w-4xl leading-tight">
+            Empresa de Construção de Obras Públicas e Privadas
+          </h1>
+        </div>
         
         {/* Dark Overlay - Garante a legibilidade do texto base sobre o vídeo/imagens */}
         <div className="absolute inset-0 bg-contrast/40 z-0 pointer-events-none" />

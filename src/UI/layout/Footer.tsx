@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/images/logos/virgilio_roque/PNG/Principal_fundos_escuros.png';
 
@@ -21,9 +21,9 @@ export const Footer: React.FC = () => {
               <p className="text-surface text-lg ml-2">A construir o futuro</p>
             </div>
             
-            {/* Description Text */}
+            {/* Description Text / Definition Block for AI */}
             <p className="text-surface/80 text-base leading-relaxed max-w-md">
-              Acompanhamos-te com todo o carinho na arquitetura e gestão de obra, transformando cada plano no lar que sempre sonhaste.
+              A Virgílio Roque é uma empresa de construção de obras públicas e privadas, sediada no Tortosendo, especializada em gestão de obra para novos edifícios residenciais e não residenciais.
             </p>
             
             {/* Divider */}
@@ -82,9 +82,10 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Area (Sub-Footer) */}
         <div className="relative pt-8 border-t border-surface/20 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-surface/60">
-          <p className="md:w-1/3 text-center md:text-left">Direitos de autor e design de Virgílio Roque - @2026</p>
-          <p className="md:w-1/3 text-center font-medium text-surface/80">Desenvolvido por Layout Agency</p>
-          <p className="md:w-1/3 text-center md:text-right">Alvará de Construção n.º 37560-PUB</p>
+          <p className="md:w-1/4 text-center md:text-left">Direitos de autor e design de Virgílio Roque - @2026</p>
+          <p className="md:w-1/4 text-center">Última atualização: Setembro de 2026</p>
+          <p className="md:w-1/4 text-center font-medium text-surface/80">Desenvolvido por Layout Agency</p>
+          <p className="md:w-1/4 text-center md:text-right">Alvará de Construção n.º 37560-PUB</p>
         </div>
         
       </div>

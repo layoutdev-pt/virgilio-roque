@@ -30,7 +30,7 @@ export default defineConfig({
       dynamicRoutes: dynamicRoutes,
       // O Google sinaliza erros se o sitemap contiver rotas que disparam redirecionamentos (301/302).
       exclude: ['/sobre'], 
-      generateRobotsTxt: true
+      generateRobotsTxt: false
     })
   ]
 })

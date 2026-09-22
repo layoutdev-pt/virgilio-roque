@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PageHero } from '@/sections/shared/PageHero';
 
@@ -25,6 +25,45 @@ const PhoneIcon = ({ className = "" }) => (
 
 const Contactos: React.FC = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    source: '',
+    message: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!isChecked) return;
+    
+    setStatus('loading');
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', source: '', message: '' });
+        setIsChecked(false);
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
+  };
 
   return (
     <main className="w-full bg-background flex flex-col min-h-[calc(100vh-80px)]">
@@ -118,17 +157,17 @@ const Contactos: React.FC = () => {
               <h2 className="text-2xl font-bold font-sora text-contrast mb-2">Agende um horário</h2>
               <p className="text-contrast/60 mb-8">Pronto para começar? Envie-nos uma mensagem e a nossa equipa entrará em contacto consigo o mais breve possível.</p>
               
-              <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
                 
                 {/* Linha 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
                     <label htmlFor="name" className="text-sm font-semibold text-contrast/80">Nome Completo</label>
-                    <input type="text" id="name" placeholder="O seu nome" className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast" />
+                    <input type="text" id="name" required value={formData.name} onChange={handleChange} placeholder="O seu nome" className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label htmlFor="email" className="text-sm font-semibold text-contrast/80">Endereço de Email</label>
-                    <input type="email" id="email" placeholder="O seu email" className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast" />
+                    <input type="email" id="email" required value={formData.email} onChange={handleChange} placeholder="O seu email" className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast" />
                   </div>
                 </div>
 
@@ -136,7 +175,7 @@ const Contactos: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
                     <label htmlFor="subject" className="text-sm font-semibold text-contrast/80">Assunto</label>
-                    <select id="subject" defaultValue="" className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast appearance-none cursor-pointer">
+                    <select id="subject" required value={formData.subject} onChange={handleChange} className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast appearance-none cursor-pointer">
                       <option value="" disabled>Selecione um assunto</option>
                       <option value="orcamento">Pedido de Orçamento</option>
                       <option value="visita">Agendar Visita</option>
@@ -146,7 +185,7 @@ const Contactos: React.FC = () => {
                   </div>
                   <div className="flex flex-col gap-2">
                     <label htmlFor="source" className="text-sm font-semibold text-contrast/80">Como Nos Conheceu?</label>
-                    <select id="source" defaultValue="" className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast appearance-none cursor-pointer">
+                    <select id="source" value={formData.source} onChange={handleChange} className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast appearance-none cursor-pointer">
                       <option value="" disabled>Selecione uma opção</option>
                       <option value="google">Pesquisa Google</option>
                       <option value="social">Redes Sociais</option>
@@ -159,7 +198,7 @@ const Contactos: React.FC = () => {
                 {/* Linha 3 */}
                 <div className="flex flex-col gap-2">
                   <label htmlFor="message" className="text-sm font-semibold text-contrast/80">Mensagem</label>
-                  <textarea id="message" placeholder="Escreva aqui a sua mensagem..." className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast min-h-[120px] resize-y"></textarea>
+                  <textarea id="message" required value={formData.message} onChange={handleChange} placeholder="Escreva aqui a sua mensagem..." className="w-full bg-surface/30 border border-transparent focus:border-primary focus:bg-white rounded-xl px-5 py-3 outline-none transition-all text-contrast min-h-[120px] resize-y"></textarea>
                 </div>
 
                 {/* Aceitação Legal */}
@@ -188,9 +227,27 @@ const Contactos: React.FC = () => {
                   </label>
                 </div>
 
+                {/* Status Messages */}
+                {status === 'success' && (
+                  <div className="bg-green-50 text-green-700 p-4 rounded-xl text-sm font-medium">
+                    A sua mensagem foi enviada com sucesso. Entraremos em contacto brevemente!
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="bg-red-50 text-red-700 p-4 rounded-xl text-sm font-medium">
+                    Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde ou contacte-nos por telefone.
+                  </div>
+                )}
+
                 {/* Botão */}
-                <button type="submit" className="self-start mt-2 bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-full transition-colors flex items-center gap-2">
-                  Agendar Agora
+                <button 
+                  type="submit" 
+                  disabled={status === 'loading'}
+                  className={`self-start mt-2 font-bold py-4 px-8 rounded-full transition-colors flex items-center gap-2 ${
+                    status === 'loading' ? 'bg-gray-400 cursor-not-allowed text-white' : 'bg-primary hover:bg-primary/90 text-white'
+                  }`}
+                >
+                  {status === 'loading' ? 'A enviar...' : 'Agendar Agora'}
                 </button>
 
               </form>
