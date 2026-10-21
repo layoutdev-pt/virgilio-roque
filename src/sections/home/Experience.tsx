@@ -1,19 +1,37 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import type { Service } from "@/types/types";
+import type { LucideIcon } from "lucide-react";
+import {
+  Ruler,
+  Scale,
+  Lightbulb,
+  HardHat,
+  Hammer,
+  Building2,
+  Wrench,
+} from "lucide-react";
 
 import imgExp1 from "@/assets/images/random/experiencia-1.jpeg";
 import imgExp2 from "@/assets/images/random/experiencia-2.jpeg";
 import imgExp3 from "@/assets/images/random/experiencia-3.jpeg";
 import imgExp4 from "@/assets/images/random/experiencia-4.jpeg";
 
-export const statsData: Service[] = [
+export interface ExperienceItem {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+  Icon: LucideIcon;
+  image: string;
+}
+
+export const statsData: ExperienceItem[] = [
   {
     id: "stat-1",
     number: "01",
     title: "Projetos à Medida",
     description: "Construímos com qualidade e profissionalismo tendo sempre atenção aos detalhes",
-    iconName: "https://api.iconify.design/lucide:ruler.svg",
+    Icon: Ruler,
     image:
       "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
@@ -22,7 +40,7 @@ export const statsData: Service[] = [
     number: "02",
     title: "Rigor e Ética",
     description: "Maxima transparência em todas as relacoes",
-    iconName: "https://api.iconify.design/lucide:scale.svg",
+    Icon: Scale,
     image:
       "https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
@@ -31,20 +49,20 @@ export const statsData: Service[] = [
     number: "03",
     title: "Design Inovador",
     description: "Procuramos sempre inovar utilizando as técnicas mais recentes e as solução mais avançadas",
-    iconName: "https://api.iconify.design/lucide:lightbulb.svg",
+    Icon: Lightbulb,
     image:
       "https://images.unsplash.com/photo-1503694978374-8a2fa686963a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   },
 ];
 
-export const servicesData: Service[] = [
+export const servicesData: ExperienceItem[] = [
   {
     id: "exp-1",
     number: "01",
     title: "Projetos Habitacionais",
     description:
       "Moradias e complexos residenciais focados na inovação e na qualidade.",
-    iconName: "https://api.iconify.design/lucide:hard-hat.svg",
+    Icon: HardHat,
     image: imgExp1,
   },
   {
@@ -53,7 +71,7 @@ export const servicesData: Service[] = [
     title: "Reabilitação Urbana",
     description:
       "Devolvemos vida a edifícios, valorizando o património, o ambiente e a sustentabilidade",
-    iconName: "https://api.iconify.design/lucide:hammer.svg",
+    Icon: Hammer,
     image: imgExp2,
   },
   {
@@ -62,7 +80,7 @@ export const servicesData: Service[] = [
     title: "Setor Social",
     description:
       "Grande experiência em construção de equipamentos destinados a geriatria e equipamentos de apoio social",
-    iconName: "https://api.iconify.design/lucide:building-2.svg",
+    Icon: Building2,
     image: imgExp3,
   },
   {
@@ -71,16 +89,18 @@ export const servicesData: Service[] = [
     title: "Obras Públicas",
     description:
       "Construção de infraestruturas e edifícios destinados ao setor publico com a qualidade e exigência que o mercado exige.",
-    iconName: "https://api.iconify.design/lucide:wrench.svg",
+    Icon: Wrench,
     image: imgExp4,
   },
 ];
 
 interface ServiceCardProps {
-  service: Service;
+  service: ExperienceItem;
 }
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+  const IconComponent = service.Icon;
+
   return (
     <div className="relative group overflow-hidden rounded-lg min-h-[200px] flex items-center cursor-pointer shadow-md bg-background">
       {/* Imagem de Fundo Base (visível apenas em hover) */}
@@ -112,11 +132,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
         </div>
 
         {/* Ícone */}
-        <div className="w-16 h-16 shrink-0 opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110">
-          <img
-            src={service.iconName}
-            alt={`Ícone ${service.title}`}
-            className="w-full h-full object-contain filter invert-0 group-hover:invert"
+        <div className="w-16 h-16 shrink-0 flex items-center justify-center opacity-80 transition-all duration-500 group-hover:opacity-100 group-hover:scale-110">
+          <IconComponent
+            className="w-12 h-12 text-contrast transition-colors duration-500 group-hover:text-background"
+            strokeWidth={1.5}
           />
         </div>
       </div>

@@ -1,29 +1,38 @@
 import React, { useEffect, useRef, useState } from 'react';
+import type { LucideIcon } from 'lucide-react';
+import { PenTool, HardHat, ClipboardCheck, Key } from 'lucide-react';
 
-const steps = [
+interface JourneyStep {
+  id: number;
+  title: string;
+  description: string;
+  Icon: LucideIcon;
+}
+
+const steps: JourneyStep[] = [
   {
     id: 1,
     title: "Ideia & Planeamento",
     description: "Partilhe connosco a sua visão. A nossa equipa desenha o projeto à medida das suas necessidades e apresenta um orçamento detalhado e transparente.",
-    icon: "https://api.iconify.design/lucide:pen-tool.svg"
+    Icon: PenTool
   },
   {
     id: 2,
     title: "Execução da Obra",
     description: "Deitamos mãos à obra com rigor e prazos definidos. Garantimos um acompanhamento constante para que saiba sempre a que ritmo avançamos.",
-    icon: "https://api.iconify.design/lucide:hard-hat.svg"
+    Icon: HardHat
   },
   {
     id: 3,
     title: "Inspeção Final",
     description: "Realizamos um controlo de qualidade minucioso, garantindo que todos os acabamentos estão perfeitos e de acordo com o padrão exigido.",
-    icon: "https://api.iconify.design/lucide:clipboard-check.svg"
+    Icon: ClipboardCheck
   },
   {
     id: 4,
     title: "Entrega do Trabalho",
     description: "O seu novo espaço está pronto. Entregamos o projeto, pronto a ser vivido ou rentabilizado.",
-    icon: "https://api.iconify.design/lucide:key.svg"
+    Icon: Key
   }
 ];
 
@@ -76,6 +85,7 @@ export const CustomerJourney: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-6 relative z-10">
             {steps.map((step, index) => {
               const itemDelay = index * 500;
+              const StepIcon = step.Icon;
               return (
               <div 
                 key={step.id} 
@@ -84,10 +94,9 @@ export const CustomerJourney: React.FC = () => {
               >
                 {/* Icon Card */}
                 <div className="relative z-10 w-24 h-24 rounded-2xl bg-gradient-to-br from-primary to-sec flex items-center justify-center mb-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_10px_40px_-10px_var(--color-primary)]">
-                  <img 
-                    src={step.icon} 
-                    alt={step.title} 
-                    className="w-10 h-10 object-contain filter invert brightness-0 contrast-100 opacity-90"
+                  <StepIcon 
+                    className="w-10 h-10 text-background opacity-90 transition-transform duration-300 group-hover:scale-110"
+                    strokeWidth={1.75}
                   />
                   
                   {/* Mini-badge numérico */}
